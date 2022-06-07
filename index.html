@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
       <div class="container">
         <a class="logo" href="index.html"><span>I</span>Speako</a>
-
         <img
           id="mobile-cta"
           class="mobile-menu"
@@ -20,7 +20,6 @@
           width="21"
           height="21"
         />
-
         <nav>
           <img
             id="mobile-exit"
@@ -29,22 +28,25 @@
             alt="Close Navigation"
             width="17"
           />
-          <ul class="primary-nav">
-            <li class="current"><a href="#">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#">About</a></li>
+          <ul class="primary-nav nav-links">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#features">Features</a></li>
+            <li><a class="nav-link" href="#testimonials">Testimonials</a></li>
           </ul>
 
           <ul class="secondary-nav">
-            <li><a href="#contact">Contact</a></li>
-            <li class="go-premium-cta"><a href="#">Sign Up</a></li>
+            <li><a class="contact nav-link" href="#contact">Contact</a></li>
+            <li class="go-premium-cta">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="container">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container animate">
         <div class="left-col">
           <p class="subhead">Learn a new language today</p>
           <h1>Practice with people around the world</h1>
@@ -61,8 +63,9 @@
       </div>
     </section>
 
+    <!-- Features Section -->
     <section id="features" class="features-section">
-      <div class="container">
+      <div class="container animate">
         <ul class="features-list">
           <li>Practice with natives</li>
           <li>Video calls</li>
@@ -71,53 +74,50 @@
           <li>Group chats</li>
           <li>Daily challenges</li>
         </ul>
-
         <img src="images/featuresboard.svg" alt="Illustration" />
       </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials-section">
-      <div class="container">
+      <div class="container animate">
         <ul>
           <li>
-            <img src="images/Steve.jpg" alt="Picture of an user" />
-
+            <img src="images/steve.jpg" alt="Picture of an user" />
             <blockquote>
-              "This app is seriously the best! It's perfect to improve your vocabulary because you are talking to real people"
+              "This app is seriously the best! It's perfect to improve your
+              vocabulary because you are talking to real people"
             </blockquote>
             <cite>- Steve</cite>
           </li>
           <li>
-            <img src="images/Kaylee.jpg" alt="Picture of an user" />
-
+            <img src="images/barbara.jpg" alt="Picture of an user" />
             <blockquote>
               "If you're truly serious about learning a different language this
               app is for you! I love this app, you'll not regret it!"
             </blockquote>
-            <cite>- Kaylee</cite>
+            <cite>- Barbara</cite>
           </li>
           <li>
-            <img src="images/Lise.jpg" alt="Picture of an user" />
-
+            <img src="images/nicole.jpg" alt="Picture of an user" />
             <blockquote>
               "I feel privileged to met sensational people through the app.
               You'll learn a lot about cultures"
             </blockquote>
-            <cite>- Lise</cite>
+            <cite>- Nicole</cite>
           </li>
         </ul>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
-      <div class="container">
+      <div class="container animate">
         <div class="contact-left">
           <h2>Contact</h2>
-
           <form action="">
             <label for="name">Name</label>
             <input type="name" name="name" id="name" />
-
             <label for="message">Message</label>
             <textarea
               name="message"
@@ -125,7 +125,6 @@
               cols="30"
               rows="10"
             ></textarea>
-
             <input
               type="submit"
               class="send-message-cta"
@@ -133,15 +132,15 @@
             />
           </form>
         </div>
-
         <div class="contact-right">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6336.847649283143!2d-122.1744352!3d37.4270914!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd014733a8f9ba694!2sStanford%20University%20-%20Computer%20Science%20Department!5e0!3m2!1spt-BR!2sbr!4v1637684516329!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22250.41806750532!2d-35.713468640268744!3d-9.650644950635671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70145009f13b6eb%3A0x597cf37096164562!2sPraia%20de%20Ponta%20Verde!5e0!3m2!1spt-BR!2sbr!4v1654446843923!5m2!1spt-BR!2sbr"
             width="600"
             height="450"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>

@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 :root {
   --primary-color: #007af3;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -11,7 +15,7 @@ html {
 body {
   background: #f2f2f2;
   margin: 0;
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
 
 ul {
@@ -58,7 +62,7 @@ section {
   nav {
     position: fixed;
     z-index: 1;
-    width: 160px;
+    width: 190px;
     right: 0;
     top: 0;
     background: #20272e;
@@ -81,10 +85,6 @@ section {
         transition: 0.2s ease;
       }
     }
-    a:hover {
-      color: rgba(255, 255, 255, 0.712);
-      transition: 0.2s ease;
-    }
 
     .mobile-menu-exit {
       float: right;
@@ -98,6 +98,23 @@ section {
       transition: 0.2s ease;
     }
   }
+}
+/////////////////////////////////////////////////
+.sticky {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.animate {
+  opacity: 1;
+  transition: 800ms;
+}
+
+.content-animate {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 //Main section
@@ -166,7 +183,8 @@ section {
 }
 
 //Features of the app
-section.features-section {
+.features-section {
+  padding: 6em 2em;
   background: #20272e;
   color: white;
 }
@@ -185,7 +203,7 @@ ul.features-list {
 
     //Check icons
     &:before {
-      content: "";
+      content: '';
       left: -2em;
       top: 0.11em;
       position: absolute;
@@ -205,6 +223,7 @@ ul.features-list {
 
 //Users testimonials
 .testimonials-section {
+  padding: 6em 2em;
   background: var(--primary-color);
   color: white;
 
@@ -251,7 +270,7 @@ textarea {
   box-sizing: border-box;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   background-color: var(--primary-color);
   color: white;
   font-weight: bold;
@@ -265,7 +284,7 @@ input[type="submit"] {
   cursor: pointer;
   transition: 0.2s ease;
 }
-input[type="submit"]:hover {
+input[type='submit']:hover {
   background: #007af3e1;
   transition: 0.2s ease;
 }
@@ -308,18 +327,11 @@ iframe {
         padding: 0.1em 1em;
         transition: 0.2s ease;
       }
-      a:hover {
-        color: rgba(0, 0, 0, 0.678);
-        transition: 0.2s ease;
-      }
 
       ul.primary-nav {
         margin: 0;
       }
 
-      li.current a {
-        font-weight: bold;
-      }
       li.go-premium-cta a {
         color: var(--primary-color);
         border: 3px solid var(--primary-color);
@@ -436,7 +448,7 @@ iframe {
   .features-section {
     position: relative;
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       width: 10%;
       height: 20em;
@@ -446,7 +458,7 @@ iframe {
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       width: 200px;
       height: 11em;
