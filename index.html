@@ -37,7 +37,7 @@
           <ul class="secondary-nav">
             <li><a class="contact nav-link" href="#contact">Contact</a></li>
             <li class="go-premium-cta">
-              <a class="nav-link" href="#">Sign Up</a>
+              <a class="nav-link open-modal" href="#">Sign Up</a>
             </li>
           </ul>
         </nav>
@@ -51,7 +51,7 @@
           <p class="subhead">Learn a new language today</p>
           <h1>Practice with people around the world</h1>
           <div class="hero-cta">
-            <a href="#" class="primary-cta">Try for free</a>
+            <a href="#" class="primary-cta open-modal">Try for free</a>
             <a href="#" class="watch-video-cta">
               <img src="images/video.png" alt="Watch a video" width="22" />
               <span>Watch a Video</span>
@@ -112,8 +112,8 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-      <div class="container animate">
-        <div class="contact-left">
+      <div class="container">
+        <div class="contact-left animate">
           <h2>Contact</h2>
           <form action="">
             <label for="name">Name</label>
@@ -135,8 +135,6 @@
         <div class="contact-right">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22250.41806750532!2d-35.713468640268744!3d-9.650644950635671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70145009f13b6eb%3A0x597cf37096164562!2sPraia%20de%20Ponta%20Verde!5e0!3m2!1spt-BR!2sbr!4v1654446843923!5m2!1spt-BR!2sbr"
-            width="600"
-            height="450"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
@@ -145,6 +143,42 @@
         </div>
       </div>
     </section>
+
+    <!-- Sign up modal -->
+    <div class="modal hidden">
+      <img class="close-modal" src="images/close.png" alt="" width="17" />
+      <div class="signup-form">
+        <h2 class="modal-header">Create your account</h2>
+        <form>
+          <label for="name">Full Name</label>
+          <input type="text" />
+          <label for="email">Email</label>
+          <input type="email" />
+          <label for="password">Password</label>
+          <input type="password" />
+          <button>Sign Up</button>
+        </form>
+        <p>
+          Already have an account?<a class="signin-instead" href="#">Sign in</a>
+        </p>
+      </div>
+      <div class="signin-form display-none">
+        <h2 class="modal-header">Sign In</h2>
+        <form>
+          <label for="email">Email</label>
+          <input type="email" />
+          <label for="password">Password</label>
+          <input type="password" />
+          <button>Log In</button>
+        </form>
+        <p>
+          Don't have an account yet?<a class="signup-instead" href="#"
+            >Sign Up</a
+          >
+        </p>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
     <script src="script.js"></script>
   </body>
 </html>

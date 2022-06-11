@@ -93,7 +93,6 @@ headerObserver.observe(hero);
 const allSections = document.querySelectorAll('.animate');
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) return;
   entry.target.classList.remove('content-animate');
@@ -107,4 +106,54 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('content-animate');
+});
+
+/////////////////////////////
+//Sign Up Modal
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnsOpenModal = document.querySelectorAll('.open-modal');
+const btnCloseModal = document.querySelector('.close-modal');
+const btnSignInInstead = document.querySelector('.signin-instead');
+const btnSignUpInstead = document.querySelector('.signup-instead');
+const signInForm = document.querySelector('.signin-form');
+const signUpForm = document.querySelector('.signup-form');
+
+const openModal = function (e) {
+  e.preventDefault();
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+
+  setTimeout(() => {
+    if (!signInForm.classList.contains('display-none')) {
+      signInForm.classList.add('display-none');
+      signUpForm.classList.remove('display-none');
+    }
+  }, 1000);
+};
+
+btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
+
+btnSignInInstead.addEventListener('click', function (e) {
+  e.preventDefault();
+  signUpForm.classList.add('display-none');
+  signInForm.classList.remove('display-none');
+});
+btnSignUpInstead.addEventListener('click', function (e) {
+  e.preventDefault();
+  signUpForm.classList.remove('display-none');
+  signInForm.classList.add('display-none');
 });
