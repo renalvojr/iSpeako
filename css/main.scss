@@ -433,12 +433,12 @@ iframe {
         font-weight: bold;
         border-radius: 5em;
         margin-top: -0.2em;
-        transform: 0.4s ease;
+        transition: 0.3s ease;
 
         &:hover {
           background: var(--primary-color);
           color: white;
-          transform: 0.4s ease;
+          transition: 0.3s ease;
         }
       }
     }

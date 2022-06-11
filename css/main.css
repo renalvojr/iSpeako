@@ -448,14 +448,14 @@ iframe {
     font-weight: bold;
     border-radius: 5em;
     margin-top: -0.2em;
-    -webkit-transform: 0.4s ease;
-            transform: 0.4s ease;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   .header .container nav li.go-premium-cta a:hover {
     background: var(--primary-color);
     color: white;
-    -webkit-transform: 0.4s ease;
-            transform: 0.4s ease;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   .modal {
     min-width: 60%;
